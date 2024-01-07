@@ -74,7 +74,7 @@ public class Game {
         }
     }
 
-feature-unit-tests
+
     void makeMove(int row, int col) {
 
         if (board.isCellEmpty(row, col)) {
@@ -85,7 +85,6 @@ feature-unit-tests
         }
     }
 
-feature-unit-tests
     void makeComputerMove() {
 
         System.out.println("Computer's turn:");
@@ -120,7 +119,7 @@ feature-unit-tests
 
         return move;
     }
-feature-unit-tests
+
     void switchCurrentPlayer() {
         currentPlayer = (currentPlayer == player1) ? player2 : player1;
     }
