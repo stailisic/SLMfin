@@ -5,12 +5,14 @@ import java.util.Random;
 import java.util.InputMismatchException;
 
 public class Game {
+
     final Player player1;
     final Player player2;
     Player currentPlayer;
     final Board board;
     private final Random random;
     boolean againstComputer;
+
 
     public Game() {
         player1 = new Player('X');
@@ -72,7 +74,9 @@ public class Game {
         }
     }
 
+feature-unit-tests
     void makeMove(int row, int col) {
+
         if (board.isCellEmpty(row, col)) {
             board.place(row, col, currentPlayer.getMarker());
         } else {
@@ -81,7 +85,9 @@ public class Game {
         }
     }
 
+feature-unit-tests
     void makeComputerMove() {
+
         System.out.println("Computer's turn:");
         int row, col;
         do {
@@ -114,12 +120,13 @@ public class Game {
 
         return move;
     }
-
+feature-unit-tests
     void switchCurrentPlayer() {
         currentPlayer = (currentPlayer == player1) ? player2 : player1;
     }
 
     boolean hasWinner() {
+
         return checkRows() || checkColumns() || checkDiagonals();
     }
 

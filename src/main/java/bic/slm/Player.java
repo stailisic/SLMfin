@@ -12,4 +12,3 @@ public class Player {
         return marker;
     }
 }
-
