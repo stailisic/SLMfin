@@ -21,3 +21,11 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Test with Maven
       run: mvn test
+    - name: diagnostics
+      run: |
+        echo "List processes:"
+        ps aux
+        echo "Check memory:"
+        free -m
+        echo "Check disk space:"
+        df -h
