@@ -1,7 +1,9 @@
 package bic.slm;
 
 public class Board {
+
    public char[][] cells;
+
 
     public Board() {
         cells = new char[3][3];
@@ -49,5 +51,3 @@ public class Board {
     }
 
 }
-
-
