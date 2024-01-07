@@ -46,44 +46,38 @@ public class Game {
     }
 
     private void playGame() {
-        board.clear(); // Clear the board for a new game
+        board.clear();
         currentPlayer = player1;
 
         while (true) {
             board.print(currentPlayer);
 
-            if (currentPlayer == player1 || !againstComputer) {
+            boolean moveMade = false;
+            while (!moveMade) {
                 int row = getPlayerMove("row (0-2): ");
                 int col = getPlayerMove("column (0-2): ");
-                makeMove(row, col);
-            } else {
-                makeComputerMove();
+                if (board.isCellEmpty(row, col)) {
+                    makeMove(row, col);
+                    moveMade = true;
+                } else {
+                    System.out.println("That cell is already occupied. Try again.");
+                }
             }
 
-            if (hasWinner()) {
-                board.print(currentPlayer);
-                System.out.println("Player " + currentPlayer.getMarker() + " wins!");
-                break;
-            } else if (board.isFull()) {
-                board.print(currentPlayer);
-                System.out.println("It's a draw!");
-                break;
-            }
-
-            switchCurrentPlayer();
+            // Rest of the game logic...
         }
     }
 
 
-    void makeMove(int row, int col) {
 
+    void makeMove(int row, int col) {
         if (board.isCellEmpty(row, col)) {
             board.place(row, col, currentPlayer.getMarker());
         } else {
             System.out.println("Invalid move. Try again.");
-            makeMove(getPlayerMove("row (0-2): "), getPlayerMove("column (0-2): "));
         }
     }
+
 
     void makeComputerMove() {
 
