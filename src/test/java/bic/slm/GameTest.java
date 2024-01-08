@@ -2,8 +2,6 @@ package bic.slm;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import java.io.ByteArrayInputStream;
-
 
 public class GameTest {
 
@@ -21,12 +19,10 @@ public class GameTest {
         Game game = new Game();
         game.board.clear();
 
-        // Make a valid move with player1
-        game.makeMove(0, 0); // Player1 makes a move
+        game.makeMove(0, 0);
         char player1Marker = game.currentPlayer.getMarker();
         assertEquals(player1Marker, game.board.cells[0][0]);
 
-        // Switch to player2 and attempt an invalid move in the same cell
         game.switchCurrentPlayer();
         char player2Marker = game.currentPlayer.getMarker();
         if (player1Marker != player2Marker) {
@@ -36,15 +32,6 @@ public class GameTest {
         // Assert the cell remains unchanged (still contains player1's marker)
         assertEquals(player1Marker, game.board.cells[0][0], "Cell should not change after an invalid move");
     }
-
-
-
-
-
-
-
-
-
 
 
     @Test
