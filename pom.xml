@@ -5,8 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>bic.slm</groupId>
-    <artifactId>TicTacToe</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>pixelplayground</artifactId>
+    <version>1.0</version>
+
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
