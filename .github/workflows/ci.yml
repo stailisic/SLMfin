@@ -49,6 +49,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./target/pixelplayground.jar
-          asset_name: pixelplayground.jar
+          asset_path: ./target/pixelplayground-1.0.jar
+          asset_name: pixelplayground-1.0.jar
           asset_content_type: application/java-archive
