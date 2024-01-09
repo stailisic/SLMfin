@@ -28,8 +28,51 @@ The 'Main' class contains the main method and serves as the entry point for the 
 # Starting the Application #
 
 1. Execute the 'Main' class.         
-2. The game will start and provide instructions for selecting gamemode (against the computer or another player).           
+2. The game will start and provide instructions for selecting gamemode (against the computer or another player).
 
+
+# Functionality Overview #
+
+1. Make a move
+Players can make a move by choosing an empty square on the board. The 'Game' class orchestrates this process, ensuring that the chosen move is valid and updating the 'Board' accordingly. The sequence of actions involves:
+
+  - Displaying the current state of the board.    
+  - Prompting the player for input (row and column).    
+  - Verifying the validity of the chosen move.    
+  - Placing the player's symbol on the chosen square.       
+  - Continuously allowing players to make moves until the game concludes.   
+
+
+2. Game result notification
+Upon the completion of a game (win, loss, or draw), the 'Game' class notifies players of the result. This involves:
+
+  - Checking for a win, loss, or draw condition after each move.    
+  - Displaying the final state of the board.     
+  - Notifying the players of the game outcome.     
+
+        
+3. Start a new game
+After completing a game, players have the option to start a new one. The 'Game' class manages this functionality by:
+
+  - Displaying a prompt asking if the player wants to play again.     
+  - Resetting the Board to its initial state for a fresh game.      
+  - Allowing the player to choose a new opponent (PC or another player).     
+
+        
+4. Play against PC or another player
+The 'Game' class supports playing against both the computer and another human player, providing a dynamic gaming experience. The player can:
+
+  - Choose the opponent type at the beginning of each game.      
+  - Engage in a strategic battle against the computer or challenge a friend.     
+
+             
+5. Manual game Shutdown
+Players have the flexibility to manually shut down the game at any point. The 'Game' class enables this by:
+
+  - Displaying a prompt asking if the player wants to exit.     
+  - Providing a smooth termination of the application, allowing players to end the session on          their terms.      
+
+      
 # Unit Tests #
 
 Each class in the project is accompanied by a dedicated test class to ensure the correctness of its functionality.
