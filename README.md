@@ -1,3 +1,6 @@
+![Build Status](https://github.com/stailisic/TicTacToe/actions/workflows/ci.yml/badge.svg)
+
+
 # Java - Game - TicTacToe # 
 
 Collaborators: 
