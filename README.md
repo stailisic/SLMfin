@@ -1,5 +1,8 @@
 ![Build Status](https://github.com/stailisic/TicTacToe/actions/workflows/ci.yml/badge.svg)
 
+![Latest Release](https://img.shields.io/github/v/release/stailisic/TicTacToe)
+
+
 
 # Java - Game - TicTacToe # 
 
